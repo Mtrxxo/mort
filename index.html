@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!--Google Font Links-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <!--CSS File Link-->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+<body>
+<div class="container">
+  <form action="/" class="form" id="form" name="myform">
+    <div class="head-info">
+      <h1>Mortgage Calculator</h1>
+      <a href="/" role="button" id="clear">Clear All</a>
+    </div>
+    <h2>Mortgage Amount</h2>
+    <div class="inputgroup amount">
+      <button><span><i class="fa-solid fa-sterling-sign"></i></span></button>
+      <input type="text" name="amnt" id="amnt">
+    </div>
+    <p id="amnt_err" class="errormsg"></p>
+    
+    <div class="row-ones">
+      <div class="one">
+        <h2>Mortgage Term</h2>
+        <div class="inputgroup mort-term">
+          <input type="text" name="term" id="term">
+          <button><span>years</span></button>
+        </div>
+        <p id="term_err" class="errormsg"></p>
+      </div>
+      <div class="two">
+        <h2>Interest Rate</h2>
+        <div class="inputgroup mort-rate">
+          <input type="text" name="rate" id="rate">
+          <button><span>%</span></button>
+        </div>
+        <p id="rate_err" class="errormsg"></p>
+      </div>
+    </div>
+
+    <h2>Mortgage Type</h2>
+    <div class="radio">
+      <div class="repay">
+        <input type="radio" name="option" id="repayment">
+        <p>Repayment</p>  
+      </div>
+      <div class="interest">
+        <input type="radio" name="option" id="interest">
+        <p>Interest Only</p>
+      </div>
+    </div>
+    <p class="errormsg" id="radio_err"></p>
+    <button type="submit" class="submit">
+      <img src="assets/images/icon-calculator.svg" alt="">
+      <p>Calculate Repayments</p>
+    </button>
+  </form>
+
+  <div class="answer">
+    <section class="empty">
+      <img src="assets/images/illustration-empty.svg" alt="">
+      <h2>Results shown here</h2>
+
+      <p>
+        Complete the form and click “calculate repayments” to see what 
+        your monthly repayments would be.
+      </p>
+    </section>
+    <section class="result">
+      <h2>Your results</h2>
+
+      <p class="extra-info">
+        Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.
+      </p>
+      <div class="payment-details">
+        <div>
+          <p>Your monthly repayments</p>
+          <p>
+            <span><i class="fa-solid fa-sterling-sign"></i><span id="monthly-payments"></span></span>
+          </p>
+        </div>
+        <div>
+          <p>Total you'll repay over the term</p>
+          <p>
+            <span><i class="fa-solid fa-sterling-sign"></i><span id="total-payments"></span></span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/9e37084d9f.js" crossorigin="anonymous"></script>
+</body>
+</html>
